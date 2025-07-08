@@ -1,0 +1,369 @@
+
+ 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><!-- Atualizada com Tailwind -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bdc Island - Comunidade Discord</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #4F46E5 0%, #10B981 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, rgba(79,70,229,0.1) 0%, rgba(16,185,129,0.1) 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
+        }
+    </style>
+</head>
+<body class="font-poppins bg-light text-dark">
+    <!-- Cabeçalho -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="https://cdn.discordapp.com/icons/1328697213416771617/a_e5ec7587bd812929bf52d4e120c3203c.gif?size=2048" alt="Logo Bdc Island" class="h-10 w-10 mr-3">
+                    <span class="text-2xl font-bold gradient-text">Bdc Island</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                </nav>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="md:hidden hidden mt-4 py-3 border-t border-gray-100" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-20 md:py-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Junte-se ao <span class="gradient-text">Bdc Island</span> no Discord
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        Uma comunidade vibrante onde gamers e criadores se conectam, compartilham experiências e se divertem juntos.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors shadow-lg font-medium">
+                            Entrar no Discord
+                        </button>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfh6rXKB4lISLvFBdJJUQt0aVXd4Z-qJpmrVMwm_qOnhkkf6Q/viewform" target="_blank" style="text-decoration: none;">
+  <button style="background-color: #6c63ff; color: white; padding: 12px 24px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">
+    form staff
+  </button>
+</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://cdn.discordapp.com/icons/1328697213416771617/a_e5ec7587bd812929bf52d4e120c3203c.gif?size=2048" alt="" class="rounded-xl shadow-2xl border-8 border-white">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Recursos -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-primary font-medium">NOSSA COMUNIDADE</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">O que oferecemos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Um espaço acolhedor com diversos recursos para gamers e criadores de conteúdo.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="feature-card bg-white p-8 rounded-xl transition-all duration-300 hover:border-primary border border-transparent">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Desenvolvimento Web</h3>
+                    <p class="text-gray-600 mb-4">
+                        esse site foi totalmente desenvolvido pelo o Dvxx.
+                    </p>
+                    <a href="#" class="text-primary font-medium inline-flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="feature-card bg-white p-8 rounded-xl transition-all duration-300 hover:border-primary border border-transparent">
+                    <div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">comunidade muito boa e respeituosa</h3>
+                    <p class="text-gray-600 mb-4">
+                        entre ja e veja a melhor comunidade!.
+                    </p>
+                    <a href="#" class="text-secondary font-medium inline-flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="feature-card bg-white p-8 rounded-xl transition-all duration-300 hover:border-primary border border-transparent">
+                    <div class="w-16 h-16 bg-purple-500 bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">um mar de jogos e diversao esperando por voce!</h3>
+                    <p class="text-gray-600 mb-4">
+                        um espaço acolhedor para voce, gamer que quer ganhar todas.
+                    </p>
+                    <a href="#" class="text-purple-500 font-medium inline-flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Estatísticas -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <h3 class="text-4xl font-bold text-white mb-2"></h3>
+                    <p class="text-white opacity-80">diversao e zoeira por todo lado</p>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-4xl font-bold text-white mb-2"></h3>
+                    <p class="text-white opacity-80">equipe staff para tirar todas suas duvidas!</p>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-4xl font-bold text-white mb-2"></h3>
+                    <p class="text-white opacity-80">cridores de conteudos e alguns youtubers vao amar jogar com voce!</p>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-4xl font-bold text-white mb-2"></h3>
+                    <p class="text-white opacity-80">form staff aberto para todos!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-primary font-medium">opinião do nossos membros</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">O que nossos membros dizem sobre nosso servidor.</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Veja como transformamos o dia a dia do nossos membros !
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="testimonial-card p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="https://sdmntpreastus.oaiusercontent.com/files/00000000-9454-61f9-8d36-e1d78727ab4f/raw?se=2025-07-08T15%3A10%3A29Z&sp=r&sv=2024-08-04&sr=b&scid=4353611d-38d3-54b7-95e7-fae5a5b359a5&skoid=f28c0102-4d9d-4950-baf0-4a8e5f6cf9d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-07T21%3A51%3A29Z&ske=2025-07-08T21%3A51%3A29Z&sks=b&skv=2024-08-04&sig=v9HCWNqSM7xpA/9uuxwOs6HTmKPORY0YnmXtRlK8Pmw%3D" alt="foto da Bdc Island" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">mathkzk</h4>
+                            <p class="text-gray-500 text-sm">sub-desenvolvedor</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "muito legal, consegui jogar com muitas pessoas e estou muito feliz em jogar na bdc!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="testimonial-card p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="https://sdmntpreastus.oaiusercontent.com/files/00000000-9454-61f9-8d36-e1d78727ab4f/raw?se=2025-07-08T15%3A10%3A29Z&sp=r&sv=2024-08-04&sr=b&scid=4353611d-38d3-54b7-95e7-fae5a5b359a5&skoid=f28c0102-4d9d-4950-baf0-4a8e5f6cf9d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-07T21%3A51%3A29Z&ske=2025-07-08T21%3A51%3A29Z&sks=b&skv=2024-08-04&sig=v9HCWNqSM7xpA/9uuxwOs6HTmKPORY0YnmXtRlK8Pmw%3D" alt="Foto de perfil de Ricardo Oliveira, CEO de startup" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Alemão</h4>
+                            <p class="text-gray-500 text-sm">desenvolvedor do servdior</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "c "
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="testimonial-card p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="https://sdmntpreastus.oaiusercontent.com/files/00000000-9454-61f9-8d36-e1d78727ab4f/raw?se=2025-07-08T15%3A10%3A29Z&sp=r&sv=2024-08-04&sr=b&scid=4353611d-38d3-54b7-95e7-fae5a5b359a5&skoid=f28c0102-4d9d-4950-baf0-4a8e5f6cf9d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-07T21%3A51%3A29Z&ske=2025-07-08T21%3A51%3A29Z&sks=b&skv=2024-08-04&sig=v9HCWNqSM7xpA/9uuxwOs6HTmKPORY0YnmXtRlK8Pmw%3D" alt="Foto de perfil de Ana Clara Santos, fundadora de e-commerce" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Dvxx</h4>
+                            <p class="text-gray-500 text-sm">desenvolvedor do site!</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "eu jogava sozinho e agora estou jogando muito melhor com meus novos amigos!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Coluna 1 -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="https://sdmntpreastus.oaiusercontent.com/files/00000000-9454-61f9-8d36-e1d78727ab4f/raw?se=2025-07-08T15%3A10%3A29Z&sp=r&sv=2024-08-04&sr=b&scid=4353611d-38d3-54b7-95e7-fae5a5b359a5&skoid=f28c0102-4d9d-4950-baf0-4a8e5f6cf9d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-07T21%3A51%3A29Z&ske=2025-07-08T21%3A51%3A29Z&sks=b&skv=2024-08-04&sig=v9HCWNqSM7xpA/9uuxwOs6HTmKPORY0YnmXtRlK8Pmw%3D" alt="Logotipo Moderno - versão monocromática" class="h-8 w-8 mr-3">
+                        <span class="text-2xl font-bold text-white">obrigado por usar o site da bdc! estamos felizes em ver voce aqui!</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Transformamos uma pessoa que jogava sozinha para uma pessoa que joga em squad e ganha todas!.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    © 2025 Bdc. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Termos de Serviço</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Política de Privacidade</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Efeito smooth scroll para links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Adiciona classe sticky ao header quando faz scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Animação dos cards ao aparecer na tela
+        const animateOnScroll = function() {
+            const featureCards = document.querySelectorAll('.feature-card');
+            
+            featureCards.forEach(card => {
+                const cardPosition = card.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if(cardPosition < screenPosition) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Inicializa as animações
+        window.addEventListener('load', function() {
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            setTimeout(() => {
+                window.addEventListener('scroll', animateOnScroll);
+                animateOnScroll(); // Executa uma vez ao carregar
+            }, 300);
+        });
+    </script>
+</body>
+</html>
+```
